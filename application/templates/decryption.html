@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <h1>Image Decryption</h1>
+    <form method="post">
+        {{ form.csrf_token }}
+        <div class="form-group">
+            {{ form.decryption_key.label }}
+            {{ form.decryption_key(class="form-control") }}
+            {% if form.decryption_key.errors %}
+                {% for error in form.decryption_key.errors %}
+                    <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <button type="submit" class="btn btn-primary">Decrypt Image</button>
+    </form>
+</div>
+{% endblock %}

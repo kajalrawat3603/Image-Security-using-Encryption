@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container mt-4" style="text-align: center;">
+    <h4>Upload the Image</h4>
+</div>
+{{ dropzone.create(action='upload', class='dropzone', maxFiles=1) }}
+{{ dropzone.load_js() }}
+{{ dropzone.config() }}
+
+<div class="d-flex justify-content-center mt-4">
+    <form action="{{ url_for('encryption') }}" method="get" onsubmit="return checkFileSelected('encrypt')">
+        <button type="submit" class="btn btn-outline-dark m-2" name="encrypt">Image Encryption</button>
+    </form>
+    <form action="{{ url_for('decryption') }}" method="get" onsubmit="return checkFileSelected('decrypt')">
+        <button type="submit" class="btn btn-outline-dark m-2" name="decrypt">Image Decryption</button>
+    </form>
+</div>
+
+<script>
+  function checkFileSelected(action) {
+      var dropzone = Dropzone.forElement(".dropzone"); 
+      var count = dropzone.files.length;
+      if (count === 0) {
+          alert("Please upload an image before proceeding to " + (action === 'encrypt' ? 'encryption' : 'decryption') + ".");
+          return false;
+      } else if (count > 1) {
+          dropzone.removeAllFiles(true);
+          alert("Please upload only one file at a time for " + (action === 'encrypt' ? 'encryption' : 'decryption') + ".");
+          return false;
+      }
+      return true;
+  }
+</script>
+
+
+{% endblock %}
