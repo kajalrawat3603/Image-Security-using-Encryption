@@ -40,9 +40,9 @@ This Flask-based web application enables secure image uploading, encryption, and
      source imgenv/bin/activate
      ```
 3. **Install Dependencies:**
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 4. **Run the application:**
    ```bash
@@ -53,18 +53,18 @@ pip install -r requirements.txt
 
    
 ## Usage
-### Upload Image
-1. Navigate to the upload page and select an image file.
-2. Click on the "Upload Image" button.
-
-### Encrypt Image
-1. After uploading an image, navigate to the encryption page.
-2. Enter an encryption key (must be at least 16 characters long).
-3. Click on the "Encrypt Image" button to encrypt and download the image.
-
-### Decrypt Image
-1. Upload an encrypted image.
-2. Go to the decryption page.
-3. Enter the decryption key used to encrypt the image.
-4. Click on the "Decrypt Image" button to decrypt and download the image.
+   ### Upload Image
+   1. Navigate to the upload page and select an image file.
+   2. Click on the "Upload Image" button.
+   
+   ### Encrypt Image
+   1. After uploading an image, navigate to the encryption page.
+   2. Enter an encryption key (must be at least 16 characters long).
+   3. Click on the "Encrypt Image" button to encrypt and download the image.
+   
+   ### Decrypt Image
+   1. Upload an encrypted image.
+   2. Go to the decryption page.
+   3. Enter the decryption key used to encrypt the image.
+   4. Click on the "Decrypt Image" button to decrypt and download the image.
 
