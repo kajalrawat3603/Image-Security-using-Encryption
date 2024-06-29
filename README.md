@@ -28,17 +28,17 @@ This Flask-based web application enables secure image uploading, encryption, and
    ```
 
 2. **Create and Activate a Virtual Environment:**
-  #### On Windows:
-  ```bash
-  python -m venv imgenv
-  .\imgenv\Scripts\activate
-  ```
+     #### On Windows:
+     ```bash
+     python -m venv imgenv
+     .\imgenv\Scripts\activate
+     ```
   
-  #### On macOS/Linux:
-  ```bash
-  python -m venv imgenv
-  source imgenv/bin/activate
-  ```
+     #### On macOS/Linux:
+     ```bash
+     python -m venv imgenv
+     source imgenv/bin/activate
+     ```
 3. **Install Dependencies:**
 ```bash
 pip install -r requirements.txt
